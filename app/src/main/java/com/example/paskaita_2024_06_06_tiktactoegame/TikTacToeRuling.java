@@ -14,7 +14,7 @@ public class TikTacToeRuling {
         boardValues = new ActivePlayer[9];
     }
 
-    public void makeMove(int tileNumber, ActivePlayer activePlayer){
+    public void makeAMove(int tileNumber, ActivePlayer activePlayer){
         if(tileNumber < 9 && tileNumber >= 0)
             boardValues[tileNumber] = activePlayer;
     }
@@ -53,7 +53,7 @@ public class TikTacToeRuling {
                     boardValues[3 + i] == boardValues[6 + i] &&
                     boardValues[i] != null
             ){
-                return 3 + i;
+                return 4 + i;
             }
         }
         return -1;
